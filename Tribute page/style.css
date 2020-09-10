@@ -1,0 +1,67 @@
+.container{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  grid-template-area:"header",
+                     "img",
+                     "content",
+                     "footer";
+ }
+.header{
+  grid-area: header;
+  font-size: large;
+  text-align: center;
+}
+.img{
+  background-color: white;
+  background-size: contain;
+  grid-area: img;
+  font-size: large;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
+    
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+@media screen and (min-width:30em) {img{width:50%;}
+}
+@media screen and (max-width: 1080px)  {
+  img {
+    width: 100%; 
+  }
+
+#firstcenter{text-align: center;}
+
+.content{
+  grid-area: content;
+  font-size: large;
+  text-align: left;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+#Prim-Minister-Quote{padding-left: 4%;}
+.footer{
+  grid-area: footer;
+  font-size: 1.17em;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  }
+body{
+   background-color: #e6e6e6;
+}
+h1{font-family: Open Sans, sans-serif; text-decoration:blink; }
+h3{font-family: Open Sans, sans-serif;}
+p{font-family: Open Sans, sans-serif; font-size: 2vw;} 
+/* vw unit size experiment +/
+li{font-family: Open Sans, sans-serif;}
+ul{font-family: Open Sans, sans-serif;}
+*/
