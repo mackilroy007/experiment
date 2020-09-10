@@ -1,24 +1,89 @@
+* {/*this is our css reset*/
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+/*
+these are the 3 main theme colors:
+#1d2d50
+#133b5c
+#1e5f74
+#fcdab7
+*/
 body{
-    border: 10px solid red;
+    /*border: 10px solid red;*/
+    background:  #fcdab7;
 }
 header{
-    border: 10px solid blue;
+    /*border: 10px solid blue;*/
+}
+#header-image{
+    background-image: linear-gradient(rgba(30, 109, 116, 0.5), rgba(252, 218, 183, 0.5)), url(/copyright-30343_1280.webp);
+    background-position: center;/*image is meant to clip and repeat*/
+    height: 10em;
+    width: 100vw;
 }
 nav{
-    border: 10px solid green;
+    /*border: 10px solid green;*/
+    background-color: #fcdab7;
+}
+nav > ul, li{ /*only to the ul an li within nav*/
+    list-style-type: none; /*removing the bulletpoints of the ul within the nav folder*/
+    display: inline;
+    padding-left: 1em;
 }
 article{
-    border: 10px solid yellow;
+    /*border: 10px solid yellow;*/
+    background:#fcdab7;
 }
 #feature{
-    border: 10px solid orange;
+    border: 1px solid #1e5f74;
+}
+#feature-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/forest-image.jpg");
+    height: 5em;
+    width: auto;
+    background-position: center; /* set a picture as a background with some shading*/
+    background-repeat: no-repeat; /* made sure it stays in the same position and doesn't repeat*/
+    background-size: cover;
+    position: relative;
+}
+#feature-image-text{
+    color: white; /*made the font color white to make it readable and changed it's size*/
+    font-size: 2em;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+   }
+#rows:before{ /*gap between feature and collumns*/
+    /*border: 10px solid purple;*/
+    content: "";
+    display: table;
+    clear: both;
 }
 #rows{
-    border: 10px solid purple;
+    position: absolute; /*placing the footer at the bottom 0*/
+    width: 100%; 
 }
 #column{
-    border: 10px solid white;
+    border: 0.2em solid #1e5f74;
+    float: left;    /*creating columns from left to right*/
+    padding: 0.5em;
+    width: 31%;     /*as there are 3 columns we want to split the space evenly*/
+    height: auto;  /*defining the column size. it will change with differnt size*/
+    background-color:#aaa;
+}
+#rows:after{ /*closing collums and creating a gap to the footer */
+    /*border: 10px solid purple;*/
+    content: "";
+    display: table;
+    clear: both;
 }
 footer{
-    border: 10px solid black;
+    /*border: 10px solid black;*/
+    background-image: linear-gradient(rgba(252, 218, 183, 0.5), rgba(30, 109, 116, 0.5));
+    font-size: 2em;
+    position: absolute; /*placing the footer at the bottom 0*/
+    bottom: 0;
+    width: 100%; 
 }
